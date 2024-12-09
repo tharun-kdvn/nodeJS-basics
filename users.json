@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Emily",
+      "lastName": "Johnson",
+      "maidenName": "Smith",
+      "age": 28,
+      "gender": "female"
+    },
+    {
+      "id": 2,
+      "firstName": "Dwayne",
+      "lastName": "Johnson",
+      "maidenName": "Smith",
+      "age": 45,
+      "gender": "male"
+    },
+    {
+      "name": "Rupa",
+      "id": 4,
+      "gender": "female"
+    },
+    {
+      "name": "Rupa",
+      "id": 4,
+      "gender": "female"
+    },
+    {
+      "name": "Rupa",
+      "id": 5,
+      "gender": "female"
+    }
+  ],
+  "total": 208,
+  "skip": 0,
+  "limit": 30
+}
