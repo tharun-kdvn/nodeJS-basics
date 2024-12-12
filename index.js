@@ -16,6 +16,15 @@ const User = require('./models/userModel');
     deleteUserHandler,
     checkInput
 } = require('./controllers/userController')
+
+const {
+    getProductHandler,
+    getProductByIdHandler,
+    addProductHandler,
+    updateProductHandler,
+    deleteProductHandler,
+    // checkInput
+} = require('./controllers/productController')
 const fs = require("fs");
 const file = fs.readFileSync('./users.json', 'utf-8')
 JSON.parse(file)
@@ -61,6 +70,18 @@ app.post('/api/addUser',checkInput, addUserHandler)
 app.put('/api/updateUser/:id',checkInput,updateUserHandler)
 
 app.delete('/api/deleteUser/:id',deleteUserHandler)
+
+// Route Handlers for products
+app.get('/api/product', getProductHandler)
+
+app.get('/api/product/:id', getProductByIdHandler)
+
+// As input is compulsory for POST, PUT and DELETE, we chain the middleware here
+app.post('/api/product',checkInput, addProductHandler)
+
+app.put('/api/product/:id',checkInput,updateProductHandler)
+
+app.delete('/api/product/:id',deleteProductHandler)
 
 
 
